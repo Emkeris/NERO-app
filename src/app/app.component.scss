@@ -1,0 +1,106 @@
+// COLORS
+$nav-bg-color: #2E3844;
+$nav-links: #fff;
+$spec-orange: #FF3B1F;
+
+//BASE
+
+// hedader
+header {
+
+  nav {
+    background-color: $nav-bg-color;
+    width: 100%;
+
+    a {
+      img{
+        padding: 10px 20px;
+      }
+    }
+
+    ul {
+      display: table;
+      list-style: none;
+      margin: 0 auto;
+
+      li {
+        display: inline-block;
+        padding: 0 25px;
+        font-size: 18px;
+        font-weight: 300;
+
+        a {
+          text-decoration: none;
+          color: $nav-links;
+        }
+
+        .cool-link {
+          &::after {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 2px;
+            background: $spec-orange;
+            transition: width 0.4s;
+          }
+
+          &:hover, &:focus {
+            &::after {
+              width: 100%;
+              transition: width 0.4s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section{
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 51% 100%, 48% 91%, 0 91%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 51% 100%, 48% 91%, 0 91%, 0 0);
+    background-color: $nav-bg-color;
+    min-height: 600px;
+
+    .container {
+      padding-top: 5%;
+
+      h1 {
+        font-size: 55px;
+        font-weight: 500;
+        margin-bottom: 20px;
+
+      }
+
+      img {
+        margin: 10px 5px;
+      }
+
+      h2 {
+        margin-top: 20px;
+        font-size: 41px;
+        font-weight: 100;
+      }
+
+      button {
+        padding: 7px 35px;
+        margin-right: 15px;
+        border: solid 1px #fff;
+        border-radius: 0;
+
+        &:hover, &:focus {
+          background-color: $spec-orange;
+          color: $nav-links;
+          outline: none;
+          border: solid 1px $spec-orange;
+        }
+      }
+    }
+
+
+
+  }
+}
+
+// finish HEADER
+
+
